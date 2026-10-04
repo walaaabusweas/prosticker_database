@@ -1,0 +1,9 @@
+services:
+  app:
+    build: .
+    ports:
+      - "8501:8501"
+    environment:
+      DATABASE_URL: sqlite:////app/data/printing_company.db
+    volumes:
+      - ./data:/app/data
